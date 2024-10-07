@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    font-family: "Barlow Semi Condensed";
+}
+
+.background {
+    background-color: hsl(210, 46%, 95%);
+    width: 100vw;
+    height: 100vh;
+    
+}
