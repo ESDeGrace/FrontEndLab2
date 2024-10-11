@@ -8,20 +8,52 @@
 .background {
     background-color: hsl(210, 46%, 95%);
     max-width: 100%;
-    width: 100vw;
-    height: 94vh;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    max-width: 90%;
+    height: 90%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Makes cards responsive */
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* Makes cards responsive */
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "card1 card1 card2 card5"
+      "card3 card4 card4 card5";
     grid-gap: 20px; /* Spacing between cards */
-    padding: 20px;
-}
+    /* padding: 20px; */
+    
+  }
+
+  .card1 {
+    grid-area: card1;
+  }
+  
+  .card2 {
+    grid-area: card2;
+  }
+  
+  .card3 {
+    grid-area: card3;
+  }
+  
+  .card4 {
+    grid-area: card4;
+  }
+  
+  .card5 {
+    grid-area: card5;
+  }
 
 /* Styling for the individual cards */
 .card1, .card2, .card3, .card4, .card5 {
     /* border: 2px solid black; */
     padding: 20px;
     border-radius: 10px;
-    max-width: 350px; /* Prevents cards from stretching across the page */
+    max-width: auto; /* Prevents cards from stretching across the page */
     background-color: white; /* Default background, will be overridden by specific cards */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -33,12 +65,14 @@
     margin-bottom: 15px; /* Adds spacing between profile and text content */
 }
 
+
 .profilephoto1, .profilephoto2, .profilephoto3, .profilephoto4, .profilephoto5 {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 15px;
 }
+
 
 /* Styling for the name and verification text */
 .testname1, .testname2, .testname3, .testname4, .testname5 {
@@ -64,4 +98,10 @@
 .card4 {
     background-color: hsl(219, 29%, 14%);
     color: hsl(0, 0%, 100%);
+}
+
+.attribution {
+    display: flex;
+    justify-content: center;
+    
 }
