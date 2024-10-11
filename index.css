@@ -1,11 +1,67 @@
 * {
     margin: 0;
     font-family: "Barlow Semi Condensed";
+    font-size: 13px;
+    /* color: rgb(231, 221, 221); */
 }
 
 .background {
     background-color: hsl(210, 46%, 95%);
+    max-width: 100%;
     width: 100vw;
-    height: 100vh;
-    
+    height: 94vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Makes cards responsive */
+    grid-gap: 20px; /* Spacing between cards */
+    padding: 20px;
+}
+
+/* Styling for the individual cards */
+.card1, .card2, .card3, .card4, .card5 {
+    /* border: 2px solid black; */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px; /* Prevents cards from stretching across the page */
+    background-color: white; /* Default background, will be overridden by specific cards */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Set up flex layout for the profile section inside each card */
+.profile-container1, .profile-container2, .profile-container3, .profile-container4, .profile-container5 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Adds spacing between profile and text content */
+}
+
+.profilephoto1, .profilephoto2, .profilephoto3, .profilephoto4, .profilephoto5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Styling for the name and verification text */
+.testname1, .testname2, .testname3, .testname4, .testname5 {
+    display: inline-block;
+}
+
+/* Color theming for each card */
+.card1 {
+    background-color: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card2 {
+    background-color: hsl(217, 19%, 35%);
+    color: hsl(0, 0%, 100%);
+}
+
+.card3, .card5 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(217, 19%, 35%);
+}
+
+.card4 {
+    background-color: hsl(219, 29%, 14%);
+    color: hsl(0, 0%, 100%);
 }
