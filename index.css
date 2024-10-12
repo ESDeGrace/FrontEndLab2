@@ -1,7 +1,7 @@
 * {
     margin: 0;
     font-family: "Barlow Semi Condensed";
-    font-size: 13px;
+    /* font-size: 13px; */
     /* color: rgb(231, 221, 221); */
 }
 
@@ -27,6 +27,11 @@
     /* padding: 20px; */
     
   }
+
+ .quotephoto {
+    z-index: 1;
+
+ } 
 
   .card1 {
     grid-area: card1;
@@ -56,6 +61,8 @@
     max-width: auto; /* Prevents cards from stretching across the page */
     background-color: white; /* Default background, will be overridden by specific cards */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    
 }
 
 /* Set up flex layout for the profile section inside each card */
@@ -104,4 +111,9 @@
     display: flex;
     justify-content: center;
     
+}
+
+.grid1 {
+    z-index: 2;
+    width: 100%;
 }
